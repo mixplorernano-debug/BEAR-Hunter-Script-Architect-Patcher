@@ -42,9 +42,9 @@ const AIAssistant: React.FC<AIAssistantProps> = ({ onAsk, loading, response, set
             <div className="w-12 h-12 bg-zinc-800 rounded-full flex items-center justify-center mx-auto mb-4">
               <i className="fa-solid fa-robot text-zinc-500 text-xl"></i>
             </div>
-            <p className="text-sm text-zinc-400">Ask about Termux, NetHunter errors, or script optimizations.</p>
+            <p className="text-sm text-zinc-400">Ask about your script, NetHunter, or general Kali Linux topics.</p>
             <div className="mt-6 space-y-2">
-                {["Explain Kali Shim", "Improve Magisk Detection", "Android 14 Perms Fix"].map(tip => (
+                {["How to install Kali on Windows 11?", "Fix common NetHunter errors", "What are metapackages?"].map(tip => (
                     <button 
                         key={tip}
                         onClick={() => onAsk(tip)}

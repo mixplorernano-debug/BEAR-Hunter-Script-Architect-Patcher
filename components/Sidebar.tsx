@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ScriptConfig } from '../types';
 
@@ -100,6 +99,50 @@ const Sidebar: React.FC<SidebarProps> = ({ config, setConfig, onDownload }) => {
                     </div>
                 </label>
             ))}
+        </div>
+      </div>
+
+      <div className="h-px bg-zinc-800 w-full"></div>
+
+      <div>
+        <h3 className="text-xs font-bold uppercase tracking-widest text-zinc-500 mb-4">Add-ons & Fixes</h3>
+        <div className="space-y-3">
+            <label className="flex items-start space-x-3 cursor-pointer p-2 rounded-md hover:bg-zinc-800/50 transition-colors">
+                <input
+                    type="checkbox"
+                    checked={config.installKex}
+                    onChange={(e) => updateConfig('installKex', e.target.checked)}
+                    className="h-4 w-4 rounded bg-zinc-900 border-zinc-700 text-violet-600 focus:ring-violet-500 shrink-0 mt-0.5"
+                />
+                <div>
+                    <span className="text-sm font-medium text-zinc-200">Install Kali KeX</span>
+                    <p className="text-xs text-zinc-500">Adds GUI support via VNC.</p>
+                </div>
+            </label>
+            <label className="flex items-start space-x-3 cursor-pointer p-2 rounded-md hover:bg-zinc-800/50 transition-colors">
+                <input
+                    type="checkbox"
+                    checked={config.setSelinuxPermissive}
+                    onChange={(e) => updateConfig('setSelinuxPermissive', e.target.checked)}
+                    className="h-4 w-4 rounded bg-zinc-900 border-zinc-700 text-violet-600 focus:ring-violet-500 shrink-0 mt-0.5"
+                />
+                <div>
+                    <span className="text-sm font-medium text-zinc-200">Set SELinux Permissive</span>
+                    <p className="text-xs text-zinc-500">Improves compatibility for some network tools.</p>
+                </div>
+            </label>
+             <label className="flex items-start space-x-3 cursor-pointer p-2 rounded-md hover:bg-zinc-800/50 transition-colors">
+                <input
+                    type="checkbox"
+                    checked={config.forceDns}
+                    onChange={(e) => updateConfig('forceDns', e.target.checked)}
+                    className="h-4 w-4 rounded bg-zinc-900 border-zinc-700 text-violet-600 focus:ring-violet-500 shrink-0 mt-0.5"
+                />
+                <div>
+                    <span className="text-sm font-medium text-zinc-200">Force DNS Resolver</span>
+                    <p className="text-xs text-zinc-500">Sets DNS to 8.8.8.8 to fix network issues.</p>
+                </div>
+            </label>
         </div>
       </div>
 

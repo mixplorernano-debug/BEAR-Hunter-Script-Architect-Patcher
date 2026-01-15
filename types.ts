@@ -1,4 +1,3 @@
-
 export interface ScriptConfig {
   faction: string;
   kaliText: string;
@@ -7,6 +6,9 @@ export interface ScriptConfig {
   scriptMode: 'full' | 'update';
   architecture: 'arm64' | 'armhf';
   metapackages: string[];
+  setSelinuxPermissive: boolean;
+  forceDns: boolean;
+  installKex: boolean;
 }
 
 export interface GeminiResponse {
