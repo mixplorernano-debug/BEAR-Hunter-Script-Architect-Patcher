@@ -1,0 +1,5 @@
+{
+  "name": "BEAR Hunter Script Architect",
+  "description": "A professional-grade utility for generating customized Kali NetHunter chroot installation and boot scripts for Termux and Magisk-rooted environments.",
+  "requestFramePermissions": []
+}
